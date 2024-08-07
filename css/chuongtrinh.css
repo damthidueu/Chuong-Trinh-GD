@@ -1,0 +1,2900 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    padding: 8px 0px;
+    background: #74c864;
+
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+    margin-top: 23px;
+    justify-content: center;
+    position: fixed;
+}
+
+.nav-link {
+    position: relative;
+    padding-bottom: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 19px;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    opacity: 1;
+}
+
+.nav-link.active {
+    color: #ffcc00;
+}
+
+.content {
+    line-height: 2;
+}
+
+#logo {
+    width: 180px;
+    margin-right: 20px;
+}
+
+.fa-solid {
+    font-size: 15px;
+}
+
+.btn7 {
+    font-family: "Be Vietnam Pro", sans-serif;
+    border: none;
+    background: #f5981c;
+    padding: 10px 23px;
+    border-radius: 10rem !important;
+    color: #fff;
+    font-weight: 500;
+}
+
+.btn7:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(196, 52, 27);
+}
+
+.en a.active {
+    color: #fdba53;
+    pointer-events: none;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.en a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.en {
+    margin-right: 35px;
+    font-size: 17px;
+}
+
+.banner-school {
+    background-image: url(../images/banner-2048x760.jpg);
+    position: relative;
+}
+
+
+
+.move-up-down {
+    animation: moveUpDown 3s infinite;
+}
+
+@keyframes moveUpDown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-school .row {
+        flex-direction: column;
+    }
+
+    .ten_lua {
+        margin-top: 20px;
+    }
+}
+
+#ngoi_sao {
+    mix-blend-mode: multiply;
+    width: 60px;
+    display: block;
+    /* Hiển thị ảnh ban đầu */
+    opacity: 1;
+    /* Độ mờ ban đầu */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.banner-hd {
+    position: absolute;
+    bottom: -1rem;
+    width: 100%;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 2;
+}
+
+.text {
+    font-weight: 700;
+    font-size: 5.5rem;
+    line-height: 1.4;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    color: #9cda49;
+    z-index: 5;
+}
+
+.text::before {
+    position: absolute;
+    content: "Chữ 1";
+    /* Sử dụng văn bản cụ thể ở đây */
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    max-width: 100%;
+    height: 100%;
+    -webkit-text-stroke: 1.2rem #fff;
+    text-shadow: rgba(0, 0, 0, 0.1) 0px 5px 8px;
+    width: 100%;
+    color: transparent;
+    /* Làm cho văn bản không nhìn thấy */
+}
+
+.main .ten_lua {
+    width: 10.3%;
+    z-index: 3;
+    bottom: 1%;
+}
+
+.ten_lua {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 14%;
+    bottom: 8%;
+}
+
+.khoa_hoc a {
+    text-decoration: none;
+}
+
+.tieude {
+    margin-top: 32px;
+}
+
+#tieu_de {
+    color: gray;
+}
+
+#tieu_de:hover {
+    color: #74c864;
+}
+
+#chuyendong {
+    opacity: 1;
+    /* Độ mờ ban đầu */
+    transition: opacity 0.3s ease-in-out;
+    margin-left: 40px
+}
+
+.outlined-text {
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 1.4;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    color: #9cda49;
+    text-align: center;
+    z-index: 5;
+}
+
+.outlined-text::before {
+    position: absolute;
+    content: attr(data-title);
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    max-width: 100%;
+    height: 100%;
+    -webkit-text-stroke: 1.2rem #fff;
+    text-shadow: rgba(0, 0, 0, 0.1) 0px 5px 8px;
+    width: 100%;
+    color: transparent;
+}
+
+.outlined {
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 1.4;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    color: #9cda49;
+    text-align: center;
+    z-index: 5;
+}
+
+.outlined::before {
+    position: absolute;
+    content: attr(data-title);
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    max-width: 100%;
+    height: 100%;
+    -webkit-text-stroke: 1.2rem #fff;
+    text-shadow: rgba(0, 0, 0, 0.1) 0px 5px 8px;
+    width: 100%;
+    color: transparent;
+}
+
+.hinhtron {
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.cir-item {
+    width: 75%;
+    aspect-ratio: 1;
+
+}
+
+.cir-box {
+    background: radial-gradient(circle, #fee6d6, #ff9901);
+    border-radius: 50%;
+    /* Ensures the element is a perfect circle */
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    /* Ensure width is set */
+    height: auto;
+    /* Adjust height to maintain aspect ratio */
+    aspect-ratio: 1;
+    /* Maintains a 1:1 aspect ratio to keep it circular */
+    overflow: hidden;
+    /* Ensures content stays within the circle */
+}
+
+.cir-item p {
+    font-weight: 700;
+    font-size: 27px;
+    color: #fff;
+    text-align: center;
+}
+
+.cir-english {
+    background: radial-gradient(circle, #f7c0db, #e54882);
+    border-radius: 50%;
+    /* Ensures the element is a perfect circle */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    /* Ensure width is set */
+    height: auto;
+    /* Adjust height to maintain aspect ratio */
+    aspect-ratio: 1;
+    /* Maintains a 1:1 aspect ratio to keep it circular */
+    overflow: hidden;
+    /* Ensures content stays within the circle */
+}
+
+.cir-item {
+    display: contents;
+
+}
+
+#hoc1 {
+    width: 340px;
+    margin-right: 80px;
+}
+
+#hoc {
+    width: 340px;
+    margin-left: 80px;
+}
+
+.hinhtron {
+    background-color: #fcfcfc;
+    padding-top: 50px;
+}
+
+.chu {
+    font-family: "Be Vietnam Pro", sans-serif;
+    text-align: center;
+    margin-left: 120px;
+    margin-right: 120px;
+    padding-top: 50px;
+}
+
+.lo-trinh {
+    background-image: url(../images/rou-bg.png);
+    position: relative;
+    z-index: -1;
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
+
+
+
+/* Hình tên lửa */
+
+.rocket-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    position: relative;
+    font-family: "Montserrat", "san-serif";
+}
+
+.labels {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.left-labels {
+    position: absolute;
+    left: 9%;
+    transform: translateX(-100%);
+    top: 60%;
+    transform: translateY(-50%);
+}
+
+.right-labels {
+    position: absolute;
+    right: 11%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.rou-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.rou-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.rou-item-bg {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rou-item-bg img {
+    width: 100%;
+    height: 137px;
+
+}
+
+.num,
+.num1,
+.num3 {
+    position: absolute;
+    top: 14%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    font-family: "Montserrat", "san-serif";
+}
+
+.num4 {
+    font-family: "Montserrat", "san-serif";
+    position: absolute;
+    top: 14%;
+    left: 9%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.num3 {
+    position: absolute;
+    top: 14%;
+    left: 9%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.num1 {
+    position: absolute;
+    top: 14%;
+    left: 13%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+
+.rou-text {
+    margin-top: 0.5rem;
+}
+
+.rou-text .text1,
+.rou-text .text3,
+.rou-text .text5,
+.rou-text .text7,
+.rou-text .text8,
+.rou-text .text9,
+.rou-text .text11 {
+    font-size: 2rem;
+    font-weight: 580;
+}
+
+.text1 {
+    right: 18%;
+    position: absolute;
+    bottom: 14%;
+}
+
+
+.text2 {
+    bottom: 14%;
+    right: 35%;
+    position: absolute;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.text5 {
+    right: 15%;
+    position: absolute;
+    bottom: 49%;
+}
+
+.text3 {
+    right: 73%;
+    position: absolute;
+    bottom: 21%;
+}
+
+.text4 {
+    bottom: 23%;
+    right: 23%;
+    position: absolute;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.text6 {
+    bottom: 51%;
+    right: 36%;
+    position: absolute;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.text9 {
+    right: 13%;
+    position: absolute;
+    bottom: 83%;
+}
+
+.text10 {
+    bottom: 88%;
+    right: 39%;
+    position: absolute;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.text8 {
+    right: 78%;
+    position: absolute;
+    bottom: 84%;
+}
+
+.text {
+    bottom: 90%;
+    right: 30%;
+    position: absolute;
+    font-size: 12px;
+}
+
+.text11 {
+    right: 79%;
+    position: absolute;
+    bottom: 74%;
+}
+
+.text12 {
+    bottom: 81%;
+    right: 28%;
+    position: absolute;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.rocket {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rocket img {
+
+    margin-top: 52px;
+}
+
+.fire {
+    right: 38%;
+    position: absolute;
+    top: 75%;
+    z-index: -1;
+}
+
+.fire2 {
+    right: 38%;
+    position: absolute;
+    top: 76%;
+    z-index: -1;
+}
+
+.fire3 {
+    right: 38%;
+    position: absolute;
+    top: 76%;
+    z-index: -1;
+}
+
+
+.fire img {
+    position: relative;
+    animation: moveUpDown 1.7s infinite ease-in-out, subtleShake 2s infinite ease-in-out;
+}
+
+.fire2 img {
+    position: relative;
+    animation: moveUpDown 2.2s 2s infinite ease-in-out, subtleShake 2.5s 2s infinite ease-in-out;
+}
+
+.fire3 img {
+    position: relative;
+    animation: moveUpDown 1.5s 4s infinite ease-in-out, subtleShake 2.2s 4s infinite ease-in-out;
+}
+
+
+@keyframes moveUpDown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+        /* Lên */
+    }
+}
+
+@keyframes subtleShake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-2px);
+        /* Lắc sang trái */
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(2px);
+        /* Lắc sang phải */
+    }
+}
+
+/* End */
+
+.dam-may {
+    position: absolute;
+    left: 26%;
+    top: 77%;
+    z-index: -2;
+}
+
+.muc-tieu {}
+
+.title-muc-tieu {
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 1.4;
+    font-family: "Montserrat", sans-serif;
+    position: absolute;
+    color: #9cda49;
+    text-align: center;
+    z-index: 5;
+    left: 42%;
+    top: 13%;
+}
+
+.title-muc-tieu::before {
+    position: absolute;
+    content: attr(data-title);
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    max-width: 100%;
+    height: 100%;
+    -webkit-text-stroke: 0.7rem #fff;
+    text-shadow: rgba(0, 0, 0, 0.1) 0px 5px 8px;
+    width: 100%;
+    color: transparent;
+}
+
+.title-ki-nang {
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 1.4;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    color: #9cda49;
+    text-align: center;
+    z-index: 5;
+}
+
+.title-ki-nang::before {
+    position: absolute;
+    content: attr(data-title);
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    max-width: 100%;
+    height: 100%;
+    -webkit-text-stroke: 0.7rem #fff;
+    text-shadow: rgba(0, 0, 0, 0.1) 0px 5px 8px;
+    width: 100%;
+    color: transparent;
+}
+
+.dia-cau img {
+    position: absolute;
+    width: 9%;
+    top: 26%;
+    left: 4%;
+}
+
+.dia-cau {
+    overflow: hidden;
+    /* Ẩn phần bên ngoài của hình ảnh */
+}
+
+.zoom-img {
+    width: 100%;
+    /* Đảm bảo hình ảnh lấp đầy phần khung */
+    height: auto;
+    -webkit-animation: pulsate-bck 2s ease-in-out infinite both;
+    animation: pulsate-bck 2s ease-in-out infinite both;
+}
+
+@-webkit-keyframes pulsate-bck {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes pulsate-bck {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.be-gai {
+    position: absolute;
+    left: 34%;
+    margin-top: 264px;
+    /* Nếu bạn muốn giữ khoảng cách trên */
+}
+
+.mt-item1 {
+    width: 350px;
+    background: linear-gradient(135deg, #ff6777 35%, #ffe5d0 100%);
+    border-radius: 7px;
+    padding: 10px 10px;
+    color: white;
+    font-family: "Be Vietnam Pro", sans-serif;
+    position: absolute;
+    left: 19%;
+    /* margin-top: 126px; */
+    top: 37%;
+}
+
+.mt-item1 p,
+.mt-item2 p,
+.mt-item3 p,
+.mt-item4 p {
+    margin-bottom: 0;
+}
+
+.mt-item2 {
+    width: 350px;
+    background: linear-gradient(135deg, #f73e4c 35%, #f8ab2a 100%);
+    border-radius: 7px;
+    padding: 10px 10px;
+    color: white;
+    font-family: "Be Vietnam Pro", sans-serif;
+    position: absolute;
+    left: 16%;
+    /* margin-top: 357px; */
+    top: 66%;
+}
+
+.mt-item3 {
+    width: 350px;
+    background: linear-gradient(135deg, #7667fd, 35%, #f96caf 100%);
+    border-radius: 7px;
+    padding: 10px 10px;
+    color: white;
+    font-family: "Be Vietnam Pro", sans-serif;
+    position: absolute;
+    left: 60%;
+    /* margin-top: 126px; */
+    top: 40%;
+}
+
+.mt-item4 {
+    width: 350px;
+    background: linear-gradient(135deg, #f650a0 35%, #ff9897 100%);
+    border-radius: 7px;
+    padding: 10px 10px;
+    color: white;
+    font-family: "Be Vietnam Pro", sans-serif;
+    position: absolute;
+    left: 62%;
+    top: 67%;
+}
+
+.muc-tieu-item>div {
+    animation: moveUpDowns 3s ease-in-out infinite;
+}
+
+.mt-item2 {
+    animation-delay: 2s;
+}
+
+.mt-item3 {
+    animation-delay: 2.5s;
+}
+
+.mt-item4 {
+    animation-delay: 3s;
+}
+
+@keyframes moveUpDowns {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+        /* Di chuyển lên 10px */
+    }
+}
+
+.phi-hanh-gia {
+    margin-top: 28%;
+    float: right;
+    margin-right: 95px;
+
+    animation: shake-right 3s infinite;
+}
+
+@keyframes shake-right {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg);
+        /* Góc lắc về phía bên phải */
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.muc-tieu-bg {
+    position: absolute;
+    z-index: -1;
+    margin-top: -12%;
+}
+
+.vong-cung {
+    position: relative;
+    bottom: 59%;
+}
+
+
+.skil1-img img {
+    border-radius: 10px;
+    position: absolute;
+}
+
+.title-skill {
+    text-align: center;
+    font-weight: 600;
+    color: #1e293b;
+    font-size: 15px;
+    background-color: #ffce4d;
+    padding: 15px;
+    width: 17%;
+    position: absolute;
+    left: 8.5%;
+    border-radius: 10rem;
+    margin-top: 10%;
+
+}
+
+.title-skill p,
+.title-skill2 p,
+.title-skill3 p,
+.title-skill4 p {
+    margin-bottom: 0;
+}
+
+.title-skill2 {
+    text-align: center;
+    font-weight: 600;
+    color: #1e293b;
+    font-size: 15px;
+    background-color: #f79469;
+    padding: 15px;
+    width: 17%;
+    position: absolute;
+    left: 30%;
+    border-radius: 10rem;
+    margin-top: 10%;
+
+}
+
+.title-skill3 {
+    text-align: center;
+    font-weight: 600;
+    color: #1e293b;
+    font-size: 15px;
+    background-color: #0090c3;
+    padding: 15px;
+    width: 17%;
+    position: absolute;
+    left: 51.7%;
+    border-radius: 10rem;
+    margin-top: 10%;
+
+}
+
+.title-skill4 {
+    text-align: center;
+    font-weight: 600;
+    color: #1e293b;
+    font-size: 15px;
+    background-color: #2abec0;
+    padding: 15px;
+    width: 17%;
+    position: absolute;
+    left: 73.5%;
+    border-radius: 10rem;
+    margin-top: 10%;
+
+}
+
+.skil1-img img {
+    transition: transform 0.3s ease;
+}
+
+.skil1-img img:hover {
+    transform: scale(1.02);
+}
+
+.ki-nang {
+    margin-bottom: 50px;
+
+}
+
+.title-giao-trinh {
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 1.4;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    color: #9cda49;
+    z-index: 5;
+    padding-bottom: 15px;
+}
+
+.title-giao-trinh::before {
+    position: absolute;
+    content: attr(data-title);
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    max-width: 100%;
+    height: 100%;
+    -webkit-text-stroke: 0.7rem #fff;
+    text-shadow: rgba(0, 0, 0, 0.1) 0px 5px 8px;
+    width: 100%;
+    color: transparent;
+}
+
+.giao-trinh {
+    background-color: #fafff9;
+}
+
+.title-giao-vien {
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 1.4;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    color: #9cda49;
+    z-index: 5;
+    padding-bottom: 15px;
+}
+
+.title-giao-vien::before {
+    position: absolute;
+    content: attr(data-title);
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    max-width: 100%;
+    height: 100%;
+    -webkit-text-stroke: 0.7rem #fff;
+    text-shadow: rgba(0, 0, 0, 0.1) 0px 5px 8px;
+    width: 100%;
+    color: transparent;
+}
+
+.gt-item {
+    font-weight: 500;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.gt-text {
+    margin-bottom: 0;
+}
+
+#ngoisao {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.giao-vien {
+    display: flex;
+    background-color: #fafff9;
+}
+
+.button3 {
+    background: #c75d00;
+    border-radius: .4rem;
+    border: none;
+    padding: 10px 28px;
+    background-size: 150% 100%;
+    background-image: linear-gradient(98deg, #fba739 33.9%, #f9c953 117.15%);
+    border-radius: .8rem !important;
+    color: white;
+    font-size: 17px;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.rounded-right {
+    border-radius: 0 100rem 100rem 0;
+    overflow: hidden;
+}
+
+.thanh-tich {
+    display: flex;
+    margin-top: 30px;
+    background-color: #fafff9;
+}
+
+.title-thanh-tich {
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 1.4;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    color: #9cda49;
+    z-index: 5;
+    padding-bottom: 15px;
+}
+
+.title-thanh-tich::before {
+    position: absolute;
+    content: attr(data-title);
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    max-width: 100%;
+    height: 100%;
+    -webkit-text-stroke: 0.7rem #fff;
+    text-shadow: rgba(0, 0, 0, 0.1) 0px 5px 8px;
+    width: 100%;
+    color: transparent;
+}
+
+.tt-right {
+    padding-left: 80px;
+}
+
+
+.swiper-slide {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.achi-ctn {
+    padding: 0 1.5rem
+}
+
+.achi-item .hpro-de {
+    top: 2.5rem;
+    left: 0.4rem;
+    position: relative;
+}
+
+.achi-item .hpro-rock {
+    position: relative;
+    top: 4rem;
+    right: -11rem;
+}
+
+.achi-box {
+    height: 344.32px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9595ff), to(#0c0c7b));
+    background: linear-gradient(to bottom, #9595ff, #0c0c7b);
+    border-radius: .8rem;
+    overflow: hidden;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 278.66px;
+}
+
+@media screen and (max-width: 1300px) {
+    .achi-box {
+        padding: 2rem
+    }
+}
+
+.achi-desc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: .8rem;
+    position: relative;
+    z-index: 5;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.hpro-img .box {
+    display: flex;
+    justify-content: center;
+}
+
+.achi-tag .txt {
+    color: #02021a;
+    font-weight: 500;
+    text-align: center;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+    .achi-tag .txt {
+        font-size: 1.4rem
+    }
+}
+
+.achi-name {
+    color: #fff;
+    font-weight: 700;
+    font-size: 19px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .achi-name {
+        font-size: 1.8rem
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .achi-name {
+        font-size: 1.6rem
+    }
+}
+
+.achi-posi {
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    font-size: 15px;
+    margin-top: 0px;
+}
+
+.achi-slide {
+    position: relative
+}
+
+.achi-slide .swiper {
+    margin: 0 -1.6rem
+}
+
+.achi-slide .swiper-slide {
+    width: calc(100%/3);
+    padding: 0 1.2rem;
+    height: auto;
+}
+
+.achi-slide .swiper-slide .achi-item,
+.achi-slide .swiper-slide .achi-box {
+    height: 100%;
+}
+
+.achi-tag {
+    display: flex;
+    align-items: center;
+    -webkit-align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    min-height: 2.5rem;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f9c953), color-stop(#f5981c), to(#f9c953));
+    background: linear-gradient(to bottom, #f9c953, #f5981c, #f9c953);
+    border-radius: .8rem;
+    margin-top: -2rem;
+    font-family: "Be Vietnam Pro", sans-serif;
+    width: 94%;
+    margin-left: 8px;
+}
+
+.swiper-button-prev {
+    position: relative;
+    left: 35.5%;
+    width: 21px;
+    height: 22px;
+    background-size: 25px 25px;
+    /* Đảm bảo hình nền nút điều hướng cũng có kích thước đúng */
+    transform: scale(1.5);
+    /* Tăng kích thước của nút */
+    margin-bottom: 8px;
+    color: orange;
+    border: 1px solid orange;
+    font-weight: bold;
+    padding-top: 2px;
+    padding-right: 2px;
+}
+
+.swiper-button-prev::after {
+    font-size: 14px;
+}
+
+.swiper-button-next {
+    top: 98%;
+    position: absolute;
+    left: 62%;
+    width: 21px;
+    height: 22px;
+    background-size: 25px 25px;
+    transform: scale(1.5);
+    color: orange;
+    border: 1px solid orange;
+    font-weight: bold;
+    padding-top: 2px;
+}
+
+.swiper-button-next::after {
+    font-size: 14px;
+}
+
+.mySwiper {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.tt-txt {
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.nut {
+    margin-top: 41px;
+}
+
+.swiper-pagination-bullet {
+    height: 11px;
+    width: 11px;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    border-radius: 1rem;
+    background: -webkit-gradient(linear, left top, right top, from(#f5981c), to(#f9c953));
+    background: linear-gradient(to right, #f5981c, #f9c953)
+}
+
+
+.swiper-pagination-bullet-active {
+    width: 2.7rem;
+}
+
+@keyframes moveLeftRightUpDown {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+
+    25% {
+        transform: translateX(6px) translateY(-5px);
+        /* Di chuyển sang phải và lên trên */
+    }
+
+    50% {
+        transform: translateX(0) translateY(5px);
+        /* Di chuyển xuống dưới */
+    }
+
+    75% {
+        transform: translateX(-5px) translateY(0);
+        /* Di chuyển sang trái */
+    }
+
+    100% {
+        transform: translateX(0) translateY(0);
+        /* Trở về vị trí ban đầu */
+    }
+}
+
+.hpro-rock img {
+    animation: moveLeftRightUpDown 2.5s infinite;
+    /* Chuyển động theo animation với thời gian 4 giây và lặp lại vô hạn */
+}
+
+.title-cam-nhan {
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 1.4;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    color: #9cda49;
+    z-index: 5;
+    padding-bottom: 15px;
+}
+
+.title-cam-nhan::before {
+    position: absolute;
+    content: attr(data-title);
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    max-width: 100%;
+    height: 100%;
+    -webkit-text-stroke: 0.7rem #fff;
+    text-shadow: rgba(0, 0, 0, 0.1) 0px 5px 8px;
+    width: 100%;
+    color: transparent;
+}
+
+
+.cam-nhan {
+    background-color: #fafff9;
+    padding-top: 30px;
+}
+
+.cn-txt {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+/* Initial state of the image: scale down and hidden */
+.ngoisao img {
+    opacity: 0;
+    transform: scale(1);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Keyframes for animation */
+@keyframes fadeInOutScale {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+/* Apply the animation */
+.ngoisao img.animate {
+    animation: fadeInOutScale 3s infinite;
+}
+
+.ngoisao {
+    display: flex;
+
+}
+
+.ngoisao1 img.animate {
+    animation: fadeInOutScale 3s infinite;
+}
+
+.ngoisao1 {
+    display: flex;
+    justify-content: end;
+}
+
+#img-ph {
+    border-radius: 50%;
+}
+
+.cn-txt {
+    font-size: 18px;
+    padding-top: 5px;
+}
+
+.phu-huynh {
+    background-color: white;
+    width: 50%;
+    padding: 20px 25px;
+    position: relative;
+    height: fit-content;
+    margin-top: 95px;
+}
+
+.ph-icon {
+    position: absolute;
+    top: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 1rem;
+}
+
+@-webkit-keyframes jello-horizontal {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1)
+    }
+
+    30% {
+        -webkit-transform: scale3d(1.25, .75, 1);
+        transform: scale3d(1.25, .75, 1)
+    }
+
+    40% {
+        -webkit-transform: scale3d(.75, 1.25, 1);
+        transform: scale3d(.75, 1.25, 1)
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.15, .85, 1);
+        transform: scale3d(1.15, .85, 1)
+    }
+
+    65% {
+        -webkit-transform: scale3d(.95, 1.05, 1);
+        transform: scale3d(.95, 1.05, 1)
+    }
+
+    75% {
+        -webkit-transform: scale3d(1.05, .95, 1);
+        transform: scale3d(1.05, .95, 1)
+    }
+
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1)
+    }
+}
+
+.ph-icon img {
+    -o-object-fit: contain;
+    object-fit: contain;
+    -webkit-animation: jello-horizontal 3s infinite both;
+    animation: jello-horizontal 3s infinite both;
+}
+
+.phu-huynh-mian {
+    display: flex;
+}
+
+.link-youtube {
+    margin-left: 50px;
+}
+
+.hinh-4-canh img {
+    position: absolute;
+    left: 91%;
+    width: 3%;
+}
+
+.cn-txt1 {
+    font-size: 15px;
+}
+
+#hinh4canh {
+    position: absolute;
+    animation: squeezeFade 3s infinite ease-in-out;
+}
+
+@keyframes squeezeFade {
+
+    0%,
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.2);
+        /* Adjust scale to control the amount of "squeeze" */
+        opacity: 1;
+    }
+}
+
+.form-bg {
+    position: relative;
+    padding-top: 10px;
+
+    padding-bottom: 50px;
+    position: relative;
+}
+
+.hform-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+}
+
+.hform-bg img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -webkit-filter: opacity(.03);
+    filter: opacity(.03);
+}
+
+.may-tinh-icon {
+    position: absolute;
+    /* top: 28%; */
+    margin-top: 99px;
+    left: 4%;
+}
+
+@keyframes moveUpDown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+        /* Adjust the value as needed */
+    }
+}
+
+.may-tinh-icon .inner img {
+    animation: moveUpDown 2s infinite;
+}
+
+.bong-tuyet-icon {
+    position: absolute;
+    left: 17%;
+    top: 17%;
+}
+
+.bong-tuyet-icon .inner img {
+    animation: moveUpDown 2s infinite;
+}
+
+.form-line {
+    position: absolute;
+    margin-top: 247px;
+
+}
+
+.duong-ke {
+    position: relative;
+}
+
+
+.line-item img {
+    width: 100%
+}
+
+.may-bay {
+    margin-top: 34%;
+    position: absolute;
+    left: -9%;
+}
+
+.form-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+.form-left {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: relative;
+    margin-right: -6%;
+    margin-left: -3%;
+}
+
+@-webkit-keyframes k-up-down {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+
+    32% {
+        -webkit-transform: translateY(-1rem);
+        transform: translateY(-1rem)
+    }
+
+    66% {
+        -webkit-transform: translateY(1rem);
+        transform: translateY(1rem)
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+
+.dam-may-1 .inner {
+    -webkit-animation: k-up-down 3s infinite linear both;
+    animation: k-up-down 3s infinite linear both;
+}
+
+.jello-horizontal {
+    -webkit-animation: jello-horizontal .9s both;
+    animation: jello-horizontal .9s both
+}
+
+@-webkit-keyframes jello-horizontal {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1)
+    }
+
+    30% {
+        -webkit-transform: scale3d(1.25, .75, 1);
+        transform: scale3d(1.25, .75, 1)
+    }
+
+    40% {
+        -webkit-transform: scale3d(.75, 1.25, 1);
+        transform: scale3d(.75, 1.25, 1)
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.15, .85, 1);
+        transform: scale3d(1.15, .85, 1)
+    }
+
+    65% {
+        -webkit-transform: scale3d(.95, 1.05, 1);
+        transform: scale3d(.95, 1.05, 1)
+    }
+
+    75% {
+        -webkit-transform: scale3d(1.05, .95, 1);
+        transform: scale3d(1.05, .95, 1)
+    }
+
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1)
+    }
+}
+
+
+.dam-may-1 img {
+    -o-object-fit: contain;
+    object-fit: contain;
+    -webkit-animation: jello-horizontal 5s infinite both;
+    animation: jello-horizontal 5s infinite both;
+}
+
+.dam-may-2 {
+    position: absolute;
+    width: 70%;
+    z-index: 5;
+    top: 81%;
+    left: -9%;
+}
+
+.dam-may-2 img {
+    -o-object-fit: contain;
+    object-fit: contain;
+    -webkit-animation: jello-horizontal 5s infinite both;
+    animation: jello-horizontal 5s infinite both;
+}
+
+.dam-may-2 .inner {
+    -webkit-animation: k-up-down 3s infinite linear both;
+    animation: k-up-down 3s infinite linear both;
+}
+
+.dam-may-1 {
+    position: absolute;
+    bottom: 34%;
+    left: -23%;
+    z-index: -1;
+}
+
+
+.form-right {
+    margin-left: auto;
+    position: relative;
+}
+
+.huy-chuong {
+    position: absolute;
+    left: 47%;
+    margin-top: 95px;
+}
+
+.form-ngoisao {
+    position: absolute;
+    left: 65%;
+    margin-top: 135px;
+}
+
+.shake-lr {
+    -webkit-animation: shake-lr 3s cubic-bezier(.455, .03, .515, .955) infinite both;
+    animation: shake-lr 3s cubic-bezier(.455, .03, .515, .955) infinite both
+}
+
+@-webkit-keyframes shake-lr {
+
+    0%,
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%
+    }
+
+    10% {
+        -webkit-transform: rotate(8deg);
+        transform: rotate(8deg)
+    }
+
+    20%,
+    40%,
+    60% {
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-10deg)
+    }
+
+    30%,
+    50%,
+    70% {
+        -webkit-transform: rotate(10deg);
+        transform: rotate(10deg)
+    }
+
+    80% {
+        -webkit-transform: rotate(-8deg);
+        transform: rotate(-8deg)
+    }
+
+    90% {
+        -webkit-transform: rotate(8deg);
+        transform: rotate(8deg)
+    }
+}
+
+
+.huy-chuong img {
+    -webkit-animation: shake-lr 2s cubic-bezier(.455, .03, .515, .955) infinite both;
+    animation: shake-lr 2s cubic-bezier(.455, .03, .515, .955) infinite both;
+}
+
+.form-ngoisao img {
+    -webkit-animation: pulsate-bck .5s ease-in-out infinite both;
+    animation: pulsate-bck .5s ease-in-out infinite both;
+}
+
+.pulsate-bck {
+    -webkit-animation: pulsate-bck .5s ease-in-out infinite both;
+    animation: pulsate-bck .5s ease-in-out infinite both
+}
+
+@-webkit-keyframes pulsate-bck {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+
+    50% {
+        -webkit-transform: scale(.9);
+        transform: scale(.9)
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+
+.form-tu-van {
+    background: linear-gradient(to bottom, #9595ff, #0c0c7b);
+    font-family: "Be Vietnam Pro", sans-serif;
+    margin-top: 192px;
+    border-radius: 33px;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 75px;
+}
+
+.button4 {
+    background: #c75d00;
+    border-radius: .4rem;
+    border: none;
+    padding: 14px;
+    background-size: 150% 100%;
+    background-image: linear-gradient(98deg, #fba739 33.9%, #f9c953 117.15%);
+    color: white;
+    font-size: 17px;
+    font-family: "Be Vietnam Pro", sans-serif;
+    width: 38%;
+}
+
+.nut-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+
+.form-tu-van h3 {
+    font-family: "Be Vietnam Pro", sans-serif;
+    font-size: 2.3rem;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+#inputText {
+    padding: 10px 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+.form-tv {
+    padding-top: 14px;
+    padding-bottom: 25px;
+}
+
+.form-line.active .line-item {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+
+.line-item {
+    width: 80%;
+    -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    overflow: hidden;
+    -webkit-transition: 1.6s ease-in-out;
+    transition: 1.6s ease-in-out;
+}
+
+.form-line.active .may-bay .inner {
+    -webkit-animation: vibrate-1 .6s linear infinite both;
+    animation: vibrate-1 .6s linear infinite both;
+    -webkit-animation-delay: 1.8s;
+    animation-delay: 1.8s
+}
+
+.may-bay {
+    -webkit-animation: k-rock-hform-line 1.3s linear both;
+    animation: k-rock-hform-line 1.3s linear both;
+}
+
+.may-bay .inner {
+    -webkit-animation: vibrate-1 .6s linear infinite both;
+    animation: vibrate-1 .6s linear infinite both;
+    -webkit-animation-delay: 1.8s;
+    animation-delay: 1.8s;
+}
+
+@keyframes vibrate-1 {
+    0% {
+        -webkit-transform: translate(0);
+        transform: translate(0)
+    }
+
+    20% {
+        -webkit-transform: translate(-2px, 2px);
+        transform: translate(-2px, 2px)
+    }
+
+    40% {
+        -webkit-transform: translate(-2px, -2px);
+        transform: translate(-2px, -2px)
+    }
+
+    60% {
+        -webkit-transform: translate(2px, 2px);
+        transform: translate(2px, 2px)
+    }
+
+    80% {
+        -webkit-transform: translate(2px, -2px);
+        transform: translate(2px, -2px)
+    }
+
+    100% {
+        -webkit-transform: translate(0);
+        transform: translate(0)
+    }
+}
+
+
+
+@-webkit-keyframes k-rock-hform-line {
+    0% {
+        left: -4%;
+        top: 270px;
+        /* Adjusted from 250px to 270px */
+    }
+
+    5% {
+        left: 4%;
+        top: calc(270px - 33%);
+    }
+
+    10% {
+        left: 8%;
+        top: calc(270px - 46%);
+        -webkit-transform: rotateZ(30deg);
+        transform: rotateZ(30deg);
+    }
+
+    15% {
+        left: 12%;
+        top: calc(270px - 45%);
+        -webkit-transform: rotateZ(30deg);
+        transform: rotateZ(30deg);
+    }
+
+    20% {
+        left: 16%;
+        top: calc(270px - 49%);
+        -webkit-transform: rotateZ(25deg);
+        transform: rotateZ(25deg);
+    }
+
+    25% {
+        left: 20%;
+        top: calc(270px - 51%);
+        -webkit-transform: rotateZ(23deg);
+        transform: rotateZ(23deg);
+    }
+
+    30% {
+        left: 24%;
+        top: calc(270px - 58%);
+        -webkit-transform: rotateZ(52deg);
+        transform: rotateZ(52deg);
+    }
+
+    40% {
+        left: 28%;
+        top: calc(270px - 58%);
+        -webkit-transform: rotateZ(58deg);
+        transform: rotateZ(58deg);
+    }
+
+    45% {
+        left: 32%;
+        top: calc(270px - 58%);
+        -webkit-transform: rotateZ(62deg);
+        transform: rotateZ(62deg);
+    }
+
+    50% {
+        left: 36%;
+        top: calc(270px - 54%);
+        -webkit-transform: rotateZ(62deg);
+        transform: rotateZ(62deg);
+    }
+
+    55% {
+        left: 40%;
+        top: calc(270px - 52%);
+        -webkit-transform: rotateZ(58deg);
+        transform: rotateZ(58deg);
+    }
+
+    60% {
+        left: 44%;
+        top: calc(270px - 47%);
+        -webkit-transform: rotateZ(48deg);
+        transform: rotateZ(48deg);
+    }
+
+    65% {
+        left: 48%;
+        top: calc(270px - 45%);
+        -webkit-transform: rotateZ(45deg);
+        transform: rotateZ(45deg);
+    }
+
+    70% {
+        left: 52%;
+        top: calc(270px - 45%);
+        -webkit-transform: rotateZ(40deg);
+        transform: rotateZ(40deg);
+    }
+
+    75% {
+        left: 56%;
+        top: calc(270px - 47%);
+        -webkit-transform: rotateZ(35deg);
+        transform: rotateZ(35deg);
+    }
+
+    80% {
+        left: 60%;
+        top: calc(270px - 51%);
+        -webkit-transform: rotateZ(31deg);
+        transform: rotateZ(31deg);
+    }
+
+    85% {
+        left: 64%;
+        top: calc(270px - 54%);
+        -webkit-transform: rotateZ(24deg);
+        transform: rotateZ(24deg);
+    }
+
+    90% {
+        left: 68%;
+        top: calc(270px - 67%);
+        -webkit-transform: rotateZ(16deg);
+        transform: rotateZ(16deg);
+    }
+
+    95% {
+        left: 72%;
+        top: calc(270px - 78%);
+        -webkit-transform: rotateZ(10deg);
+        transform: rotateZ(10deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        left: 78%;
+        top: calc(270px - 107%);
+    }
+}
+
+
+
+.title-footer {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.4;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    color: #9cda49;
+    z-index: 5;
+    padding-bottom: 15px;
+}
+
+.title-footer::before {
+    position: absolute;
+    content: attr(data-title);
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    max-width: 100%;
+    height: 100%;
+    -webkit-text-stroke: 0.7rem #fff;
+    text-shadow: rgba(0, 0, 0, 0.1) 0px 5px 8px;
+    width: 100%;
+    color: transparent;
+}
+
+footer {
+    font-family: "Be Vietnam Pro", sans-serif;
+    background: linear-gradient(to top, #dbf1c1, #f9fbfa);
+}
+
+#ft-txt {
+    text-decoration: none;
+    color: black;
+}
+
+#ft-txt:hover {
+    color: #9cda49;
+}
+
+#ttin-txt:hover {
+    color: #9cda49;
+    border-bottom: 3px solid #9cda49;
+    width: fit-content;
+}
+
+#mes {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#fb #mes #yt {
+
+    -o-object-fit: contain;
+    object-fit: contain;
+
+}
+
+@media (hover: hover) {
+    #fb:hover {
+        -webkit-transform: translateY(-.5rem);
+        transform: translateY(-.5rem)
+    }
+
+    #mes:hover {
+        -webkit-transform: translateY(-.5rem);
+        transform: translateY(-.5rem)
+    }
+
+    #yt:hover {
+        -webkit-transform: translateY(-.5rem);
+        transform: translateY(-.5rem)
+    }
+}
+
+.ft-bg {
+    position: relative;
+    text-align: center;
+    color: rgb(189, 29, 29);
+}
+
+#anh-ft {
+    width: 100%;
+    height: auto;
+}
+
+.ft-chu {
+    position: absolute;
+    padding-bottom: 20px;
+    color: rgb(19, 18, 18);
+    font-size: 15px;
+    left: 9%;
+}
+
+.ft-chu p {
+    margin-bottom: 0;
+}
+
+li {
+    list-style: none;
+    padding-top: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #02021a;
+}
+
+ul {
+    padding-left: 0;
+}
+
+.ft-sing {
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 135px;
+}
+
+.lien-he {
+    padding-top: 50px;
+}
+
+
+/* Thay đổi khi màn hình thu nhỏ */
+@media screen and (max-width: 480px) {
+
+    body {
+        width: 470px;
+    }
+
+    header {
+        padding: 17px 0;
+    }
+
+    #logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 102px;
+        height: auto;
+        /* Maintain aspect ratio */
+
+    }
+
+    .header-wrap {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .btn7 {
+        position: relative;
+        background-color: orange;
+        color: transparent;
+        width: 40px;
+        /* Kích thước lớn của nút */
+        height: 40px;
+        /* Kích thước lớn của nút */
+        padding: 0;
+        border-radius: 50%;
+        font-size: 0;
+        border: none;
+        /* Loại bỏ viền nếu có */
+        left: -27px;
+    }
+
+    .btn7::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 25px;
+        /* Kích thước nhỏ của hình ảnh */
+        height: 25px;
+        /* Kích thước nhỏ của hình ảnh */
+        transform: translate(-50%, -50%);
+        background: url('../images/phone.png') no-repeat center center;
+        background-size: contain;
+    }
+
+    .en {
+        font-size: 12px;
+    }
+
+    .navbar {
+        width: 475px;
+        padding: 0;
+    }
+
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 475px;
+        height: 100%;
+        background-color: #fff;
+        z-index: 1050;
+        overflow-y: auto;
+        padding: 1rem;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        background-color: #74c864;
+        color: white;
+        padding: 0 11px;
+        display: block;
+        padding-bottom: 3px;
+    }
+
+    .navbar-toggler {
+        margin-left: 1rem;
+    }
+
+    .navbar-nav {
+
+        color: black;
+        /* Change navbar text color to black */
+    }
+
+    .navbar-nav .nav-link {
+        margin: 0.5rem 0;
+        color: black;
+        /* Ensure individual nav links are black */
+    }
+
+    #anhbanner1 img,
+    #anhbanner img {
+        max-width: 75%;
+        height: auto;
+        /* Duy trì tỷ lệ khung hình */
+        min-width: 200px;
+        /* Chiều rộng tối thiểu cho hình ảnh */
+
+    }
+
+    #anhbanner img {
+        width: 50%;
+    }
+
+    .outlined-text {
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 1.4;
+        font-family: "Montserrat", sans-serif;
+        position: relative;
+        color: #9cda49;
+        text-align: center;
+        z-index: 5;
+        margin-top: 50px;
+    }
+
+    .outlined-text::before {
+        position: absolute;
+        content: attr(data-title);
+        z-index: -1;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        max-width: 100%;
+        height: 100%;
+        -webkit-text-stroke: 1.2rem #fff;
+        text-shadow: rgba(0, 0, 0, 0.1) 0px 5px 8px;
+        width: 100%;
+        color: transparent;
+    }
+
+    #chuyendong {
+        margin-left: 0;
+        width: 25px;
+    }
+
+    .cir-english {
+        display: none;
+    }
+
+    #hoc {
+        width: 210px;
+        margin-left: 0;
+        padding-right: 0;
+    }
+
+    #hoc1 {
+        width: 210px;
+        margin-right: 0;
+        padding-left: 0;
+    }
+
+    .cir-img img {
+        width: 80px;
+    }
+
+    #anh-hoc {
+        width: 55px;
+    }
+
+    .cir-box p {
+        font-size: 17px;
+    }
+
+    .chu {
+        margin: 0 0;
+    }
+
+    #thuoc-ke {
+        width: 30px;
+        margin-left: 23px;
+    }
+
+    .outlined {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 1.4;
+        font-family: "Montserrat", sans-serif;
+        position: relative;
+        color: #9cda49;
+        text-align: center;
+        z-index: 5;
+    }
+
+    .left-labels {
+        position: absolute;
+        left: 2%;
+        transform: translateX(-100%);
+        top: 55%;
+        transform: translateY(-50%);
+        width: 114px;
+    }
+
+    .right-labels {
+        position: absolute;
+        left: 73%;
+        transform: translateX(-100%);
+        top: 45%;
+        transform: translateY(-50%);
+        width: 114px;
+    }
+
+    .rocket img{
+        width: 86%;
+    }
+
+    .rou-item {
+        gap: 0;
+    }
+
+    .rou-item-bg img {
+        width: 129%;
+        height: 98px;
+
+    }
+
+    .rou-text .text1,
+    .rou-text .text3,
+    .rou-text .text5,
+    .rou-text .text7,
+    .rou-text .text8,
+    .rou-text .text9,
+    .rou-text .text11 {
+        font-size: 0.8rem;
+        font-weight: 580;
+    }
+
+    .num4 {
+        font-family: "Montserrat", "san-serif";
+        position: absolute;
+        top: 14%;
+        left: 9%;
+        transform: translate(-50%, -50%);
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #fff;
+    }
+    
+    .num3 {
+        position: absolute;
+        top: 14%;
+        left: -2%;
+        transform: translate(-50%, -50%);
+        font-size: 0.7rem;
+        font-weight: bold;
+        color: #fff;
+    }
+    
+    .num1 {
+        position: absolute;
+        top: 14%;
+        left: 3%;
+        transform: translate(-50%, -50%);
+        font-size: 0.7rem;
+        font-weight: bold;
+        color: #fff;
+    }
+    
+    .text12{
+        bottom: 80%;
+        right: 11%;
+        position: absolute;
+        font-size: 8px;
+        font-weight: 500;
+    }
+
+    .text4{
+        bottom: 26%;
+        right:5%;
+        position: absolute;
+        font-size: 8px;
+        font-weight: 500;
+    }
+
+    .text5 {
+        right: 2%;
+        position: absolute;
+        bottom: 50%;
+    }
+    
+    .text3 {
+        right: 80%;
+        position: absolute;
+        bottom: 24%;
+    }
+    
+    .text11 {
+        right: 85%;
+        position: absolute;
+        bottom: 74%;
+    }
+
+    .text2 {
+        bottom: 16%;
+        right: 35%;
+        position: absolute;
+        font-size: 7px;
+        font-weight: 500;
+    }
+    
+    .text6 {
+        bottom: 51%;
+        right: 36%;
+        position: absolute;
+        font-size: 7px;
+        font-weight: 500;
+    }
+
+    .text10 {
+        bottom: 85%;
+        right: 33%;
+        position: absolute;
+        font-size: 7px;
+        font-weight: 500;
+    }
+
+    .text1 {
+        right: 2%;
+        position: absolute;
+        bottom: 18%;
+    }
+
+    .text9 {
+        right: 3%;
+        position: absolute;
+        bottom: 83%;
+    }
+    
+    .num {
+        position: absolute;
+        top: 14%;
+        left: 81%;
+        transform: translate(-50%, -50%);
+        font-size: 0.7rem;
+        font-weight: bold;
+        color: #fff;
+        font-family: "Montserrat", "san-serif";
+    }
+
+    .num3 {
+        position: absolute;
+        top: 14%;
+        left: -3%;
+        transform: translate(-50%, -50%);
+        font-size: 0.7rem;
+        font-weight: bold;
+        color: #fff;
+        font-family: "Montserrat", "san-serif";
+    }
+
+    .fire {
+        right: 15%;
+        position: absolute;
+        top: 75%;
+        z-index: -1;
+    }
+
+    .fire2 {
+        right: 16%;
+        position: absolute;
+        top: 76%;
+        z-index: -1;
+    }
+
+    .fire3 {
+        right: 14%;
+        position: absolute;
+        top: 76%;
+        z-index: -1;
+    }
+
+    .dam-may img{
+        width:100%;
+    }
+
+    .dam-may {
+        position: absolute;
+        left: 0;
+        top: 77%;
+        z-index: -2;
+    }
+
+    .lo-trinh {
+        background-image: url(../images/rou-bg.png);
+        background-position: center; /* Centers the background image */
+        background-repeat: no-repeat; /* Prevents the background image from repeating */
+        background-size: cover; /* Scales the background image to cover the entire container */
+        position: relative;
+        z-index: -1;
+        padding-top: 70px;
+        padding-bottom: 50px;
+    }
+    
+    .title-muc-tieu {
+        font-size: 1.2em;
+    }
+
+    .muc-tieu-item .txt {
+        font-size: 0.8em;
+    }
+
+    .muc-tieu {
+        position: relative;
+      
+    }
+
+    .title-muc-tieu {
+        font-size: 1.5em;
+    }
+
+    .be-gai img, .muc-tieu-bg img, .vong-cung img {
+        width: 100%;
+        height: auto;
+    }
+
+    .phi-hanh-gia img{
+        width: 27%;
+        
+    }
+
+    .muc-tieu-item {
+        padding: 0 10px;
+    }
+
+    .muc-tieu-item .txt {
+        font-size: 0.9em;
+    }
+
+    .be-gai {
+        position: absolute;
+        left: 28%;
+        margin-top: 212px;
+        width: 220px;
+    }
+
+    .mt-item1 {
+        width: 370px;
+        background: linear-gradient(135deg, #ff6777 35%, #ffe5d0 100%);
+        border-radius: 7px;
+        color: white;
+        font-family: "Be Vietnam Pro", sans-serif;
+        position: absolute;
+        left: 20%;
+        top: 45%;
+        height: 99px;
+        font-size: 19px;
+    }
+
+    .mt-item2 {
+        width: 350px;
+        background: linear-gradient(135deg, #f73e4c 35%, #f8ab2a 100%);
+        border-radius: 7px;
+        padding: 10px 10px;
+        color: white;
+        font-family: "Be Vietnam Pro", sans-serif;
+        position: absolute;
+        left: 0.5%;
+        top: 57%;
+        font-size: 18px;
+    }
+
+    .mt-item3 {
+        width: 350px;
+        background: linear-gradient(135deg, #7667fd, 35%, #f96caf 100%);
+        border-radius: 7px;
+        padding: 15px 10px;
+        color: white;
+        font-family: "Be Vietnam Pro", sans-serif;
+        position: absolute;
+        left: 25%;
+        font-size: 18px;
+        top: 69%;
+    }
+
+    .mt-item4 {
+        width: 350px;
+        background: linear-gradient(135deg, #7667fd, 35%, #f96caf 100%);
+        border-radius: 7px;
+        padding: 15px 10px;
+        color: white;
+        font-family: "Be Vietnam Pro", sans-serif;
+        position: absolute;
+        left: 0.5%;
+        font-size: 18px;
+        top: 79%;
+    }
+
+    .ki-nang {
+        margin-bottom: 189%;
+    }
+
+    .muc-tieu{
+        background-size: contain;
+    }
+
+    .vong-cung {
+        position: static;
+        bottom: 59%;
+    }
+
+    .dia-cau img {
+        position: absolute;
+        width: 18%;
+        top: 17%;
+        left: 4%;
+    }
+
+    .phi-hanh-gia {
+        margin-top: 133%;
+        float: right;
+        margin-right: -210px;
+        animation: shake-right 3s infinite;
+    }
+
+    /* Kĩ Năng */
+    .title-ki-nang {
+        font-weight: 700;
+        font-size: 27px;
+        line-height: 1.4;
+        font-family: "Montserrat", sans-serif;
+        position: relative;
+        color: #9cda49;
+        text-align: center;
+        z-index: 5;
+    }
+
+    .skil1-img img{
+        margin-top: 157%;
+        margin-left: 12px;
+        width: 100%;
+    }
+}
+
+/* end màn hình mobile */
+
+#thuoc-ke {
+    position: absolute;
+    left: 3%;
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    /* Vertically center the images */
+    justify-content: space-around;
+    /* Center the images horizontally */
+
+}
+
+#anhbanner img {
+    max-width: 100%;
+    height: auto;
+    /* Duy trì tỷ lệ khung hình */
+    min-width: 200px;
+    /* Chiều rộng tối thiểu cho hình ảnh */
+    max-width: 500px;
+    /* Chiều rộng tối đa cho hình ảnh */
+}
+
+#anhbanner1 img,
+#anhbanner img {
+    max-width: 100%;
+    height: auto;
+    /* Duy trì tỷ lệ khung hình */
+    min-width: 200px;
+    /* Chiều rộng tối thiểu cho hình ảnh */
+
+}
+
+#img2 {
+    margin-left: 20px;
+}
+
+.navbar-nav {
+    margin-left: 23px;
+}
+
+/* Thay đổi màu các thanh ngang của nút navbar-toggler thành màu trắng */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Xóa viền ngoài của nút navbar-toggler và đặt màu nền */
+.navbar-toggler {
+    border: none;
+    background-color: #74c864;
+    padding: 0px;
+}
+
+/* Tăng kích thước biểu tượng của nút navbar-toggler */
+.navbar-toggler-icon {
+    width: 3rem;
+    /* Tăng kích thước chiều rộng của biểu tượng */
+    height: 2rem;
+    /* Tăng kích thước chiều cao của biểu tượng */
+}
+
+/* Mục Tiêu */
+.muc-tieu {
+    background-image: url(../images/muc-tieu-bg.png);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    margin-top: -115px;
+}
+
+.vong-cung img{
+    margin-top: 241px;
+}
+
+/* Kĩ Năng */
+.ki-nang{
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
